@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-recipe-list',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './recipe-list.css'
 })
 export class RecipeList {
-
+  @Input() recipes: { title: string; description: string; id: number; }[] = [];
 }
